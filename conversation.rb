@@ -16,4 +16,15 @@ module Conversation
 
 	MessageHash = YAML.load_file('messages.yaml')
 
+	def print_conversation
+		(0..(MessageHash['Mary'].length - 1)).each_with_index do |index|
+			MessageHash.each do |person, statement|
+				puts "#{person}:"
+				puts "\t#{statement[index]}"
+			end
+		end
+	end
+
+	module_function :print_conversation
+
 end

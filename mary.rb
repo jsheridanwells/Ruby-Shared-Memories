@@ -4,3 +4,4 @@ message = ARGV[0]
 mary = Conversation::Person.new('Mary')
 
 mary.speak(message, Conversation::MessageHash, 'messages.yaml')
+Conversation.print_conversation
